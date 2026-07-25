@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Generator</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<body>
+
+<div class="container">
+
+    <h1>🤖 AI Code Generator</h1>
+    <p class="subtitle">Generate code using AI with a beautiful interface.</p>
+
+    <label for="language">Programming Language</label>
+
+    <select id="language">
+        <option>Python</option>
+        <option>Java</option>
+        <option>C</option>
+        <option>C++</option>
+        <option>JavaScript</option>
+    </select>
+
+    <label for="prompt">Enter your prompt</label>
+
+    <textarea
+        id="prompt"
+        placeholder="Example: Create a Java program to reverse a string.">
+    </textarea>
+
+    <button onclick="generateCode()">🚀 Generate Code</button>
+
+    <h2>Generated Code</h2>
+
+    <pre id="output">No code generated yet...</pre>
+
+    <button id="copyBtn" onclick="copyCode()">📋 Copy Code</button>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
